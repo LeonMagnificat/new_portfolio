@@ -69,9 +69,9 @@ export const GlobalFootprintMap: React.FC<GlobalFootprintMapProps> = ({ isDarkMo
     ? locations 
     : locations.filter(location => location.continent === activeContinent);
 
-  // Calculate total projects
-  const totalProjects = locations.reduce((sum, location) => sum + location.projects, 0);
-  const totalCountries = new Set(locations.map(location => location.country)).size;
+  // Calculate totals (commented out for now as they're not being used)
+  // const totalProjects = locations.reduce((sum, location) => sum + location.projects, 0);
+  // const totalCountries = new Set(locations.map(location => location.country)).size;
 
   return (
     <Section id="global-footprint" className="relative overflow-hidden">

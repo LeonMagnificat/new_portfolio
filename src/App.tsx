@@ -1,20 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import * as echarts from 'echarts';
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import { fontStyles } from './styles/constants';
 
 // Components
 import { Header } from '@/components/layout/Header';
 import { Footer } from '@/components/layout/Footer';
-import { Hero } from '@/components/sections/Hero';
-import { AboutSection } from '@/components/sections/About';
-import { ServicesSection } from '@/components/sections/Services';
-import { ProjectsSection } from '@/components/sections/Projects';
-import { TestimonialsSection } from '@/components/sections/Testimonials';
-import { ContactSection } from '@/components/sections/Contact';
 import { BackgroundShapes } from '@/components/ui/BackgroundShapes';
-import { GlobalFootprintMap } from '@/components/sections/GlobalFootprintMap';
 
 // Pages
 import HomePage from '@/pages/HomePage';
@@ -30,12 +22,8 @@ import brandingIllustration from "./assets/illustrations/branding.svg";
 import contactIllustration from "./assets/illustrations/about.svg";
 
 const App: React.FC = () => {
-  const location = useLocation();
-  const [activeSection, setActiveSection] = useState('home');
   const skillsChartRef = useRef<HTMLDivElement>(null);
   const [isDarkMode, setIsDarkMode] = useState(false);
-  const { scrollY } = useScroll();
-  const y = useTransform(scrollY, [0, 300], [0, 100]);
 
   // Images configuration
   const images = {
@@ -71,6 +59,8 @@ const App: React.FC = () => {
     }
   };
 
+  // Scroll tracking effect (commented out as not currently used)
+  /*
   useEffect(() => {
     // Only set up scroll tracking on the home page
     if (location.pathname === '/') {
@@ -92,6 +82,7 @@ const App: React.FC = () => {
       return () => window.removeEventListener('scroll', handleScroll);
     }
   }, [location.pathname]);
+  */
 
   useEffect(() => {
     if (skillsChartRef.current) {
