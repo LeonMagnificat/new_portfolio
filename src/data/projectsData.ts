@@ -78,7 +78,8 @@ export const projects = [
     image: morphorosicCalcImage,
     category: "development",
     tags: ["HTML5", "CSS3", "JavaScript", "GSAP", "Responsive Design"],
-    shortDescription: "Showcasing front-end skills with a visually stunning and functional calculator"
+    shortDescription: "Showcasing front-end skills with a visually stunning and functional calculator",
+    externalUrl: "https://calculator-red-eta.vercel.app/"
   },
   {
     id: 6,
@@ -87,7 +88,8 @@ export const projects = [
     image: inoSaasImage,
     category: "development",
     tags: ["Vue.js", "Express", "PostgreSQL", "JWT", "RESTful API"],
-    shortDescription: "Streamlining account management workflows with powerful data visualization"
+    shortDescription: "Streamlining account management workflows with powerful data visualization",
+    externalUrl: "https://ino-five.vercel.app/login"
   },
   
   // Branding Projects

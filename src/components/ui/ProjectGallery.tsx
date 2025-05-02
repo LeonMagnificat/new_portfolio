@@ -13,6 +13,7 @@ interface Project {
   image: string;
   category?: string;
   tags?: string[];
+  externalUrl?: string;
 }
 
 interface ProjectGalleryProps {
@@ -256,7 +257,17 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, isDark
                     <Button className="flex-1 gap-2">
                       Request Similar Project
                     </Button>
-                    <Button variant="outline" className="flex gap-2">
+                    <Button 
+                      variant="outline" 
+                      className="flex gap-2"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        if (selectedProject.externalUrl) {
+                          window.open(selectedProject.externalUrl, '_blank');
+                        }
+                      }}
+                      disabled={!selectedProject.externalUrl}
+                    >
                       <ExternalLink className="w-4 h-4" /> Live Preview
                     </Button>
                   </div>
