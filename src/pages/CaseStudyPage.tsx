@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { ArrowLeft, ArrowRight, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { projects } from '@/data/projectsData';
 import { typography } from '@/styles/constants';
@@ -97,7 +97,7 @@ const caseStudyData = {
     }
   },
 
-  2: { // Consultfied (UI/UX project)
+  3: { // Consultfied (UI/UX project)
     client: 'Consultfied',
     logo: 'https://via.placeholder.com/150x50',
     industry: 'Consulting Technology',
@@ -141,7 +141,7 @@ const caseStudyData = {
       position: "Founder, Consultfied"
     }
   },
-  3: { // MobilaDoktor Admin (UI/UX project)
+  4: { // MobilaDoktor Admin (UI/UX project)
     client: 'MobilaDoktor',
     logo: 'https://via.placeholder.com/150x50',
     industry: 'Healthcare Technology',

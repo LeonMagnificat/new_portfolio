@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ExternalLink, Code, Layers, PenTool } from 'lucide-react';
@@ -118,7 +118,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, isDark
                         : 'bg-white/20 text-white backdrop-blur-sm'
                     }`}>
                       {getCategoryIcon(project.category)}
-                      {project.category?.charAt(0).toUpperCase() + project.category?.slice(1) || 'Other'}
+                      {project.category ? project.category.charAt(0).toUpperCase() + project.category.slice(1) : 'Other'}
                     </span>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, isDark
                         : 'bg-blue-100 text-blue-800'
                     }`}>
                       {getCategoryIcon(selectedProject.category)}
-                      {selectedProject.category?.charAt(0).toUpperCase() + selectedProject.category?.slice(1) || 'Other'}
+                      {selectedProject.category ? selectedProject.category.charAt(0).toUpperCase() + selectedProject.category.slice(1) : 'Other'}
                     </span>
                   </div>
                   

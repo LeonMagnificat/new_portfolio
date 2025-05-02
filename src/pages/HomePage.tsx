@@ -3,7 +3,6 @@ import { Hero } from '@/components/sections/Hero';
 import { AboutSection } from '@/components/sections/About';
 import { ServicesSection } from '@/components/sections/Services';
 import { ProjectsSection } from '@/components/sections/Projects';
-import { TestimonialsSection } from '@/components/sections/Testimonials';
 import { ContactSection } from '@/components/sections/Contact';
 import { GlobalFootprintMap } from '@/components/sections/GlobalFootprintMap';
 

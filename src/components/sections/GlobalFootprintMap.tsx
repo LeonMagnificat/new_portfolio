@@ -3,7 +3,6 @@ import { motion } from 'framer-motion';
 import { Section } from '@/components/layout/Section';
 import { SectionHeader } from '@/components/layout/SectionHeader';
 import { typography } from '@/styles/constants';
-import { Globe, MapPin, ExternalLink } from 'lucide-react';
 
 interface Location {
   id: number;

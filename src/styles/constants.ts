@@ -4,6 +4,8 @@ export const typography = {
   h2: 'text-3xl sm:text-4xl lg:text-5xl font-bold',
   h3: 'text-2xl sm:text-3xl lg:text-4xl font-bold',
   h4: 'text-xl sm:text-2xl lg:text-3xl font-bold',
+  h5: 'text-lg sm:text-xl font-semibold',
+  lead: 'text-lg sm:text-xl font-medium',
   body: 'text-base sm:text-lg',
   small: 'text-sm sm:text-base'
 };
