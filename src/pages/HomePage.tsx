@@ -49,8 +49,6 @@ const HomePage: React.FC<HomePageProps> = ({ isDarkMode, images, scrollToSection
       {/* Hero Section */}
       <Hero 
         isDarkMode={isDarkMode} 
-        heroImage={images.hero.src} 
-        heroAlt={images.hero.alt} 
         scrollToSection={scrollToSection} 
       />
 

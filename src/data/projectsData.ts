@@ -40,7 +40,8 @@ export const projects = [
     image: meritiosImage,
     category: "uiux",
     tags: ["Figma", "UX Research", "User Testing", "Prototyping"],
-    shortDescription: "Connecting students, schools, and companies for internships in Sweden"
+    shortDescription: "Connecting students, schools, and companies for internships in Sweden",
+    externalUrl: "https://meritios.com"
   },
   {
     id: 2,
@@ -49,16 +50,17 @@ export const projects = [
     image: consultfiedImage,
     category: "uiux",
     tags: ["B2B SaaS", "UI Redesign", "Figma", "Prototyping"],
-    shortDescription: "Matching consultants with project leads in Stockholm's consulting scene"
+    shortDescription: "Matching consultants with project leads in Stockholm's consulting scene",
+    externalUrl: "https://consultified.com"
   },
   {
     id: 3,
     title: "MobilaDoktor Admin",
-    description: "Internal admin panel redesign improving healthcare operations efficiency by 35%",
+    description: "Admin panel for efficient management of clients/users improving healthcare operations by 35%",
     image: mobilaDoktorAdminImage,
     category: "uiux",
     tags: ["Admin UI", "Design System", "Healthcare", "Internal Tools"],
-    shortDescription: "Clarity and control for healthcare operations in a telehealth platform"
+    shortDescription: "Efficient client/user management system for healthcare operations"
   },
   
   // Development Projects
@@ -122,12 +124,7 @@ export const testimonials = [
     image: "https://illustrations.popsy.co/amber/business-man.svg",
     quote: "Designing for three distinct user types taught me to balance empathy with structure. I learned how to keep interfaces simple even when logic is complex."
   },
-  {
-    name: "Erik Lindström",
-    role: "Founder, Consultfied",
-    image: "https://illustrations.popsy.co/amber/startup-founder.svg",
-    quote: "Consultfied taught me how to work fast, iterate with live feedback, and design for trust in B2B environments. Every design decision was tied to real business needs."
-  },
+
   {
     name: "Maria Andersson",
     role: "Operations Director, MobilaDoktor",

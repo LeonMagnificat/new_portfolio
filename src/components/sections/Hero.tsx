@@ -1,18 +1,15 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { typography, colors } from '@/styles/constants';
+import { AnimatedHello } from '@/components/ui/AnimatedHello';
 
 interface HeroProps {
   isDarkMode: boolean;
-  heroImage: string;
-  heroAlt: string;
   scrollToSection: (sectionId: string) => void;
 }
 
 export const Hero: React.FC<HeroProps> = ({ 
   isDarkMode, 
-  heroImage, 
-  heroAlt, 
   scrollToSection 
 }) => {
   return (
@@ -25,11 +22,7 @@ export const Hero: React.FC<HeroProps> = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <img
-              src={heroImage}
-              alt={heroAlt}
-              className="w-auto h-auto max-w-full"
-            />
+            <AnimatedHello size="120px" className="mb-4" />
           </motion.div>
           <motion.h1 
             className="hero-title text-6xl sm:text-7xl lg:text-8xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-pink-500 to-red-500 leading-[1.3] line-clamp-2"
@@ -37,7 +30,7 @@ export const Hero: React.FC<HeroProps> = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Hi, I am Leon,
+            Hi, I'm Leon —
           </motion.h1>
           
           <motion.p 
@@ -46,7 +39,7 @@ export const Hero: React.FC<HeroProps> = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            Multidisciplinary professional with 9+ years of experience combining UI/UX design expertise with financial sector knowledge. Specialized in creating intuitive digital experiences for complex financial products and services.
+            A multidisciplinary professional with over 9 years of experience blending UI/UX design with deep financial industry insight. I craft intuitive, user-centered digital experiences that simplify complex financial products and services.
           </motion.p>
 
           <motion.div 

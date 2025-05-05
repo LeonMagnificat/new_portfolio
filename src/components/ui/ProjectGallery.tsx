@@ -48,10 +48,15 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, isDark
     }
   };
 
-  // Handle project click - for UI/UX projects, go to case study page
+  // Handle project click - for UI/UX projects with externalUrl, open that URL
+  // otherwise go to case study page
   const handleProjectClick = (project: Project) => {
     if (project.category === 'uiux') {
-      navigate(`/case-study/${project.id}`);
+      if (project.externalUrl) {
+        window.open(project.externalUrl, '_blank');
+      } else {
+        navigate(`/case-study/${project.id}`);
+      }
     } else {
       setSelectedProject(project);
     }
@@ -158,7 +163,12 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, isDark
                           : isDarkMode ? 'text-blue-400 hover:text-blue-300' : 'text-blue-600 hover:text-blue-700'
                       }`}
                     >
-                      {project.category === 'uiux' ? 'View Case Study' : 'View Project'} <ArrowRight className="ml-2 h-4 w-4" />
+                      {project.category === 'uiux' 
+                        ? (project.externalUrl ? 'Preview' : 'View Case Study') 
+                        : 'View Project'} 
+                      {project.externalUrl 
+                        ? <ExternalLink className="ml-2 h-4 w-4" />
+                        : <ArrowRight className="ml-2 h-4 w-4" />}
                     </Button>
                   </div>
                 </div>
@@ -224,11 +234,11 @@ export const ProjectGallery: React.FC<ProjectGalleryProps> = ({ projects, isDark
                   </p>
                   
                   {/* Extended description for modal */}
-                  <p className={`${typography.body} ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-6`}>
+                  {/* <p className={`${typography.body} ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mb-6`}>
                     Our team worked closely with the client to deliver a solution that exceeded expectations. 
                     The project was completed on time and within budget, resulting in significant improvements 
                     to their business operations.
-                  </p>
+                  </p> */}
                   
                   {/* Tags */}
                   {selectedProject.tags && selectedProject.tags.length > 0 && (

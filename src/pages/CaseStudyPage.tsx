@@ -135,55 +135,46 @@ const caseStudyData = {
       'Received direct praise from consulting firms on ease of navigation',
       'Streamlined the consultant matching process from days to hours'
     ],
-    testimonial: {
-      quote: "Consultfied taught me how to work fast, iterate with live feedback, and design for trust in B2B environments. Every design decision was tied to real business needs.",
-      author: "Erik Lindström",
-      position: "Founder, Consultfied"
-    }
+    testimonial: null
   },
   4: { // MobilaDoktor Admin (UI/UX project)
     client: 'MobilaDoktor',
     logo: 'https://via.placeholder.com/150x50',
-    industry: 'Healthcare Technology',
-    services: ['UI/UX Design', 'Admin Panel Design', 'Design System'],
+    industry: 'Healthcare',
+    services: ['UI/UX Design', 'B2B SaaS Design', 'Prototyping'],
     country: 'Sweden',
     year: '2023',
-    tools: ['Figma', 'Sketch', 'Zeplin'],
-    challenge: 'MobilaDoktor is a telehealth platform. Their internal admin panel was a patchwork of inconsistent interfaces, making it hard for the team to manage permissions, content, and user data efficiently.',
+    tools: ['Figma', 'Miro', 'Maze'],
+    challenge: 'MobilaDoktor needed an admin panel for efficient management of clients/users. The existing system lacked proper user management capabilities, making it difficult to track and serve patients effectively.',
     process: [
       {
-        title: 'System Audit',
-        description: 'Conducted a thorough audit of the current admin system to identify UX gaps and pain points.',
+        title: 'Heuristic Review',
+        description: 'Conducted a thorough evaluation of the MVP to identify key usability issues.',
         image: 'https://via.placeholder.com/600x400'
       },
       {
-        title: 'Stakeholder Interviews',
-        description: 'Interviewed internal staff who manage permissions and app content to understand their needs.',
+        title: 'Journey Mapping',
+        description: 'Defined the complete journey of how administrators manage clients and users in the healthcare system.',
         image: 'https://via.placeholder.com/600x400'
       },
       {
-        title: 'Information Architecture',
-        description: 'Simplified information hierarchy by grouping features by role and frequency of use.',
+        title: 'UI Redesign',
+        description: 'Refreshed the visual identity with a professional, healthcare-appropriate interface for admin operations.',
         image: 'https://via.placeholder.com/600x400'
       },
       {
-        title: 'Design System Creation',
-        description: 'Developed a consistent set of UI components to ensure visual and functional coherence.',
+        title: 'Prototyping & Feedback',
+        description: 'Built interactive prototypes in Figma and collected feedback from healthcare administrators.',
         image: 'https://via.placeholder.com/600x400'
       }
     ],
-    solution: 'A role-based admin panel with a clean layout and clear permission levels, quick-access dashboards for data views and edits, and a responsive design for tablet use during offsite events.',
+    solution: 'An intuitive admin dashboard where healthcare administrators can efficiently manage clients/users, track patient information, and streamline healthcare operations with a clean, organized interface.',
     results: [
-      'Admin team reduced daily task time by 35%',
-      'Fewer data input errors reported after launch',
-      'Staff felt more confident using the platform — feedback: "It finally feels like a tool built for us"',
-      'Reduced training time for new admin staff by 40%'
-    ],
-    testimonial: {
-      quote: "This project showed me the power of quiet UX — the kind that helps real teams work better without fanfare. Internal tools matter, and designing them with empathy is crucial.",
-      author: "Maria Andersson",
-      position: "Operations Director, MobilaDoktor"
-    }
+      'Improved healthcare operations efficiency by 35%',
+      'Streamlined client management process from days to hours',
+      'Reduced training time for new admin staff by 40%',
+      'Staff reported higher satisfaction with the new admin interface'
+    ]
   }
 };
 
@@ -387,17 +378,19 @@ const CaseStudyPage: React.FC<CaseStudyPageProps> = ({ isDarkMode }) => {
             </div>
             
             {/* Testimonial - Simplified */}
-            <div className={`border-l-4 border-pink-500 pl-6 py-2 ${
-              isDarkMode ? 'bg-transparent' : 'bg-transparent'
-            }`}>
-              <blockquote>
-                <p className={`${typography.lead} italic mb-4`}>"{caseStudy.testimonial.quote}"</p>
-                <footer>
-                  <p className={`${typography.h5} text-pink-500`}>{caseStudy.testimonial.author}</p>
-                  <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{caseStudy.testimonial.position}</p>
-                </footer>
-              </blockquote>
-            </div>
+            {caseStudy.testimonial && (
+              <div className={`border-l-4 border-pink-500 pl-6 py-2 ${
+                isDarkMode ? 'bg-transparent' : 'bg-transparent'
+              }`}>
+                <blockquote>
+                  <p className={`${typography.lead} italic mb-4`}>"{caseStudy.testimonial.quote}"</p>
+                  <footer>
+                    <p className={`${typography.h5} text-pink-500`}>{caseStudy.testimonial.author}</p>
+                    <p className={`${isDarkMode ? 'text-gray-400' : 'text-gray-500'}`}>{caseStudy.testimonial.position}</p>
+                  </footer>
+                </blockquote>
+              </div>
+            )}
           </div>
         </div>
       </section>

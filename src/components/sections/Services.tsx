@@ -36,19 +36,19 @@ export const ServicesSection: React.FC<ServicesSectionProps> = ({
   const servicesList: Service[] = [
     {
       title: "UI/UX Design",
-      description: "Creating intuitive, engaging, and user-centered designs that enhance user experience and drive conversion. Specializing in user research, wireframing, and prototyping.",
+      description: "Designing intuitive, engaging user experiences that prioritize usability and conversion. I specialize in user research, wireframing, and prototyping to bring clarity and structure to digital products.",
       image: services.uiux.src,
       alt: services.uiux.alt
     },
     {
-      title: "Web Development",
-      description: "Building responsive, scalable, and high-performance web applications using React, Next.js, TypeScript, and Tailwind CSS. Focused on clean code and modern best practices.",
+      title: "Front-End Development",
+      description: "Building responsive, high-performance web applications with React, Next.js, TypeScript, and Tailwind CSS. I focus on writing clean, maintainable code aligned with modern development best practices.",
       image: services.development.src,
       alt: services.development.alt
     },
     {
       title: "Logo & Branding",
-      description: "Developing comprehensive brand identities that communicate values and resonate with target audiences. Creating cohesive visual systems from logos to complete brand guidelines.",
+      description: "Crafting meaningful brand identities that reflect core values and connect with audiences. From logo design to full brand guidelines, I create cohesive visual systems that build trust and recognition.",
       image: services.mobile.src,
       alt: services.mobile.alt
     }

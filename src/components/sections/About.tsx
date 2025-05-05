@@ -36,11 +36,9 @@ export const AboutSection: React.FC<AboutSectionProps> = ({
               About Me
             </h4>
             <p className={`${typography.body} ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-              I'm a multidisciplinary designer and developer with a passion for creating intuitive, user-centered digital experiences. With a background spanning both design and finance, I bring a unique perspective to every project, combining aesthetic sensibility with practical business understanding.
-            </p>
+            I’m a multidisciplinary designer and developer driven by a passion for crafting intuitive, user-focused digital experiences. With a unique blend of design expertise and financial industry knowledge, I approach each project with both creative vision and business insight.            </p>
             <p className={`${typography.body} ${isDarkMode ? 'text-gray-300' : 'text-gray-700'} mt-4`}>
-              Fluent in English, French, and Kinyarwanda, I've worked across diverse markets and industries, specializing in financial services, fintech, and digital transformation projects. My approach focuses on creating solutions that are not only visually appealing but also strategically aligned with business objectives.
-            </p>
+            Fluent in English, French, and Kinyarwanda, I’ve worked across various markets and industries—especially in financial services, fintech, and digital transformation. My goal is to deliver solutions that not only look great but also support clear business outcomes.            </p>
           </div>
 
           {/* Stats Grid */}
